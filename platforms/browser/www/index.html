@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Rádio Fonte Viva</title>
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<script>
+		function mudafundo1(){
+			document.getElementById('pag1').style.backgroundImage= "url('img/background2.png')";
+		}
+
+		function mudafundo2(){
+		document.getElementById('pag1').style.backgroundImage= "url('img/background3.png')";
+
+		}
+
+		function mudafundo3(){
+		document.getElementById('pag1').style.backgroundImage= "url('img/background1.png')";
+
+		}
+
+	</script>
+	
+	<!--Pacote Online do JQuery mobile
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	-->
+	</head>
+<body>
+	
+	<!--Início da ouvir-->
+	<div data-role="page" id="pag1" data-title="Ouvir">
+
+		<audio id="myAudio">
+
+			<source type="audio/mpeg" src="http://50.22.218.197:36526/;.mp3"> <!--Transmissor pascom-->
+
+ 			<source type="audio/mpeg" src="http://78.129.190.50:26339/;.mp3"><!--meu transmissor 1-->
+
+ 			<source type="audio/mpeg" src="http://95.154.254.129:12882/;.mp3"><!--meu transmissor TV-->
+  
+		</audio>
+		<button id="buttonoutro" onclick="loadAudio()"></button>
+		<!--<button id="buttonstop" onclick="pauseAudio()" type="button"></button>-->
+		<button id="buttonplay" onclick="playAudio()" type="button"><img src="img/play.png"></button>
+
+		<script>
+			var x = document.getElementById("myAudio"); 
+			function playAudio() { 
+		   		 x.play(); 
+			} 
+			function pauseAudio() { 
+		   		 x.pause(); 
+			} 
+			function loadAudio() { 
+		    	x.load(); 
+		}
+		</script>
+
+		<!--Barra escura com menus-->
+		<div data-role="content" id="barra">
+			<a href="#" id="abre"><img src="img/dots.png"></a>
+			<a href="#painel" id="home"><img src="img/home.png"></a>
+			<a href="#popuponline" data-rel="popup" id="radio" data-transition="flip"><img src="img/antena.png"></a>
+			<a href="#popup2" data-rel="popup" id="face" data-trasition="flip"><img src="img/color.png"></a>
+		
+			<a href="" id="app" data-transition="pop"><img src=""></a>
+			
+		</div>
+		<!--fim da barra escura com menus-->
+
+
+		<!--Inicio do painel lateral-->
+		<div data-role="panel" id="painel" data-display="overlay" data-theme="a">
+				<header data-role="header">
+					
+				</header>
+				<ul data-role="listview" data-inset="true">
+				    <li data-icon="clock"><a href="#dialog3" data-transition="flip">Programação</a></li>
+				    <li data-icon="shop"><a href="#pag3" data-transition="flip">Anuncie</a></li>
+				    <li data-icon="info"><a href="#pag2" data-transition="flip">Informações</a></li>
+				    <li data-icon="mail"><a href="#dialog1" data-transition="flip">Contatos</a></li>
+				    <li data-icon="delete"><a href="#" id="saida" data-rel="close" data-transition="flip" >Sair</a></li>
+				</ul>
+		</div>
+		<!--Fim do painel lateral-->
+
+		<!--popup 1-->
+		<div data-role="popup" id="popuponline">
+			<h1>Seja bem vindo!</h1>
+			<h2>Você está ouvindo:</h2>
+			<p>A programação da rádio web Fonte Viva</p>
+			<br>
+			<br>
+			<br>
+		</div>
+		<!--Fim do popup 1-->
+
+		<!--popup 2-->
+		<div data-role="popup" id="popup2">
+			<h2>Escolha seu tema</h2>
+			<button class="ui-btn" onclick="mudafundo3()">Tema </button>
+			<button class="ui-btn" onclick="mudafundo1()">Tema 2</button>
+			<button class="ui-btn" onclick="mudafundo2()">Tema 3</button>
+			
+			<br
+			<br>
+			<br>
+		</div>
+		<!--Fim do popup 2-->
+
+		<!--Início do rodapé-->
+		<footer data-role="footer"  id="footer1" data-position="fixed">
+			<p><br>&#169 2017 Paróquia Nossa Senhora das Neves</p>
+		</footer>
+		<!--Fim do rodapé-->	
+
+	</div>	
+	<!--Fim da página principal-->
+
+
+<!--Início da pagina 2-->
+	<div data-role="page" id="pag2" data-theme="a">
+
+			<!--Início do cabeçalho-->
+			<div>
+				<header data-role="header" data-position="fixed">
+					<h1>Sobre</h1>
+
+				</header>
+			</div>
+			<!--Fim do cabeçalho-->
+			
+			<!--Início da seção principal-->
+			<div data-role="content">
+			<img src="img/Pe.png" style="width: 100%; margin-top: 0px;">
+				<div data-role="collapsible-set" data-collapsed="false">
+					<div data-role="collapsible" data-collapsed="false">
+						<h3>Sobre a rádio.</h3>
+						<h3>O que faz a rádio?</h3>
+						<p>A Rádio web Fonte Viva está proposta a ser um dos canais de ligação entre a comunidade e a paróquia Nossa Senhora das Neves.</p>
+						<h3>Quem coordena?</h3>
+						<p>É coordenada pela PASCOM - pastoral da comunicação da paróquia Nossa Senhora das Neves.</p>
+						<h3>Como eu posso participar?</h3>
+						<p>Basta entrar para a PASCOM e ou qualquer outro grupo pastoral da comunidade Nossa Senhora das Neves.</p>
+						<p>Solicite informações <a href="#dialog1" data-transition="flip">clicando aqui</a></p>
+					</div>
+
+					<div data-role="collapsible" data-collapsed="false">
+						<h3>Programação</h3>
+						<h3>Quem pode fazer parte da programação?</h3>
+						<p>Qualquer grupo pastoral ou pessoa que esteja ligada a uma das igrejas da paróquia Nossa Senhora das Neves</p>
+						<h3>Como faço para ter um espaço na programação e criar meu programa?</h3>
+						<p>Procure a secretaria paroquial e peça uma cópia do FAP- formulário de alteração na programação</p>
+						<h3>Posso fazer qualquer tipo de programa?</h3>
+						<p>Não! A programação da rádio Fonte Viva esta ligada a evangelização. Portanto deve obedecer a critérios estabelecidos por diretrizes</p>
+						<p>Consulte as diretrizes <a href="#diretrizes" data-transition="flip">clicando aqui</a></p>
+						<p>Toda a programação será avaliada por uma comissão que levará em consideração a disponibilidade de horário e a estruturação antes de qualquer aprovação.</p>
+					</div>
+
+					<div data-role="collapsible" data-collapsed="false">
+						<h3>Aplicativo</h3>
+						<h3>Sobre</h3>
+						<ul>
+							<li>Versão - 1.0.0</li>
+							<li>Certificado digital - </li>
+							<li>JQuery / Cordova</li>
+							<li>Empresa - Nóbile designer</li>
+						</ul>
+					</div>
+				</div>
+			<a href="#pag1" data-role="button" data-transition="flip">Voltar</a>
+			</div>
+			<!--Fim da seção principal-->
+
+			<!--Início do rodapé-->
+			<footer data-role="footer" data-theme="b" data-position="fixed">
+				<small class="ui-bar">&#169 2017 Paróquia Nossa Senhora das Neves</small>
+			</footer>
+			<!--Fim do rodapé-->
+
+
+	</div>
+	<!--Fim da página 2-->
+
+	<!--Início da pagina 3-->
+	<div data-role="page" id="pag3" data-theme="a">
+
+			<!--Início do cabeçalho-->
+			<div>
+				<header data-role="header" data-position="fixed">
+				<h1>Anuncios</h1>
+				</header>
+			</div>
+			<!--Fim do cabeçalho-->
+			
+			<!--Início da seção principal-->
+			<div data-role="content">
+				<h2>Quer anunciar seu produto ou comunicado?</h2>
+
+				<p>Você pode anunciar durante a programação da rádio web Fonte Viva.</p>
+				<p>Anunciando sua marca ou comunicado a toda comunidade Bivar Olinto, Vila teimosa, Campo cumprido, Geralda Medeiros, Geraldo Carvalho</p>
+				<!--Começo do menu acordion-->
+				<div data-role="collapsible-set" data-collapsed="false">
+					<div data-role="collapsible" data-collapsed="false">
+				 		<h3>Anuncie na rádio</h3>
+				 		<p>Anuncie <a href="#dialog2" data-transition="flip">Clicando aqui</a> e preenchendo os dados no formulário</p>
+					
+					</div>
+					<div data-role="collapsible" data-collapsed="false">
+				 		<h3>Secretaria da paróquia</h3>
+				 		<p>Você pode solicitar seu anúncio através de contato com a secretaria pelos numeros:</p>
+				 		<p>E-mail: paroquiadasnevespb@gmail.com</p>
+					
+					</div>
+					<div data-role="collapsible" data-collapsed="false">
+				 		<h3>Pascom-Pastoral da comunicação</h3>
+				 		<p>Se preferir pode entrar em contato com a pascom pelos contatos:</p>
+				 		<p>E-mail: pascomdasneves@outlook.com</p>
+				 		
+				 		
+					
+					</div>
+				</div>
+				<!--Fim do menu acordion-->
+				<a href="#pag1" data-role="button" data-transition="flip">Voltar</a>
+			</div>
+			<!--Fim da seção principal-->
+
+			<!--Início do rodapé-->
+			<footer data-role="footer" data-theme="b" data-position="fixed">
+				<small class="ui-bar">&#169 2017 Paróquia Nossa Senhora das Neves</small>
+			</footer>
+			<!--Fim do rodapé-->
+
+
+	</div>
+	<!--Fim da página -->
+
+
+
+<!--Caixa de dialogo Metodo 1-->
+	<div data-role="page" id="dialog1" data-dialog="true" data-close-btn="none" data-corners="false" data-theme="a">
+
+			<!--Início do cabeçalho-->
+			<header data-role="header" data-position="fixed">
+				<h1>Sua mensagem</h1>
+			</header>
+			<!--Fim do cabeçalho-->
+			
+			<!--Início da seção principal-->
+			<div data-role="content">
+
+			<!--Inicio do formulario-->
+
+				<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScwelu3l0ODqUzjqsH-072-ktfsxvAQQqG9uTzJ8Q0t6CVurQ/viewform?embedded=true" width="100%" height="380" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+
+				<!--Termino do formulario do google-->
+
+				<a href="#pag1" data-transition="flip" data-role="button" data-rel="back" data-corners="false" data-shadow="false"> Cancelar</a> <!-- Cria o botão cancelar da cx de dialogo-->
+			</div>
+			<!--Fim da seção principal-->
+
+		</div>
+	<!--Fim da caixa de dialogo 1-->
+
+	<!--Caixa de dialogo Metodo 2-->
+	<div data-role="page" id="dialog2" data-dialog="true" data-close-btn="none" data-corners="false">
+
+			<!--Início do cabeçalho-->
+			<header data-role="header" data-position="fixed">
+				<h1>Anuncie</h1>
+			</header>
+			<!--Fim do cabeçalho-->
+			
+			<!--Início da seção principal-->
+			<div data-role="content">
+
+				<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScm8LkSw6rBaOEtgrvG2bm3Ef8zPyFA2THmU7uT1wTqsXZ-sw/viewform?embedded=true" width="100%" height="300px" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+
+			</div>
+
+			<a href="#pag1" data-transition="flip" data-role="button" data-rel="back" data-corners="false" data-shadow="false"> Cancelar</a>
+			<!--Fim da seção principal-->
+			
+		</div>
+		<!--Fim da caixa de dialogo 2-->
+
+	<!--Caixa de dialogo Metodo 3-->
+	<div data-role="page" id="dialog3" data-dialog="true" data-close-btn="none" data-corners="false" data-theme="a">
+
+			<!--Início do cabeçalho-->
+			<header data-role="header" data-position="fixed">
+				<h1>Programação</h1>
+			</header>
+			<!--Planilha da programação-->
+			<div id="programas">
+				<iframe src="https://docs.google.com/spreadsheets/d/1_orQwvWMQfPNgCIeBgBwLsDuh5DfV8gqZOMVK-u-PZA/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="width:124%;height: 300px;"></iframe>
+			</div>
+			
+				<a href="#pag1" data-transition="flip" data-role="button" data-rel="back" data-corners="false" data-shadow="false">Voltar</a> <!-- Cria o botão cancelar da cx de dialogo-->
+	</div>
+	<!--Fim do dialog3-->
+
+	<div data-role="page"  id="diretrizes" data-theme="a">
+		<div data-role="content" data-position="inline">
+			<div data-role="header">
+				<h1>Importante!</h1>
+			</div>
+				<div style="text-align: center; padding: 20px;">
+					<h2>Porque diretrizes?</h2>
+					<p>A fim de manter a ordem e seriedade da instituição católica, bem como também zelar pelo bom
+					funcionamento da rádio, avaliou-se ser primordial que existam mecanismos técnicos de gestão
+					que consolidem a harmonia e o profissionalismo</p>
+					<p>Portanto as diretrizes funcionais da rádio web Fonte Viva descritas neste documento, devem
+					ser consideradas e respeitadas a fim de não vir a desestruturar todo um organismo tecnico/religoso</p>
+					<p>Por tratar-se também de uma instituição voltada a prática do evangelho fica assim mais claro
+					que tal organização humana é fundamentalmente necessária, não só isso, é cotidiana na vida cristã</p>
+					<h3>Diretrizes</h3>
+					<p>1.A rádio web Fonte Viva é apenas um dos meios de comunicação utilizados pela paróquia Nossa
+					Senhora das Neves e como tal não deve ser a única nem a principal, mas sim parte da estrutura de evangelização que serve de ponte entre a
+					eucaristia e a comunidade a qual esta destinada.</p>
+					<p>2.Noticias, programas, propagandas ou quaisquer outra fonte que se utilize do sistema de
+					comunicação via rádio web Fonte Viva não poderá conter nem diretamente nem indiretamente
+					informações de base pornográfica, viciosa e ou que fira o catecismo da igreja católica ou mesmo
+					que induzam a tal.</p>
+					<p>3.Não deverá haver ataque a outros grupos religiosos ou políticos. Reportagens ou propagandas que propaguem a desunião ou firam os princípios do livre arbítrio revelado por Deus.</p>
+					<p>4.Quando se fizer uso da evangelização, devera-se-a preservar o evangelho em sua essência seja de maneira explicita ou implícita em sua programação. Evangelho assim como revelado na bíblia e propagado pela igreja católica como verdade de fé e sem nenhuma alteração de caráter fundamentalista, que vise renovação, e que
+					perturbe a sã doutrina deixada por Nosso Senhor Jesus Cristo.</p>
+					<p>5.Tem como proprietária a Paróquia Nossa Senhora das Neves na pessoa do vigário local e
+					obedecerá a toda solicitação, como também da diocese Patoense na pessoa do bispo local, estando
+					pronta a exclusão de conteúdo, propaganda, retratação e até mesmo o fechamento se assim for por
+					essas partes solicitadas. Tais condições refletem a seriedade de representar a igreja.</p>
+					<p>6.Estará sob o comando técnico da pastoral da comunicação da paróquia Nossa Senhora das Neves
+					que observará através de uma comissão toda estrutura e programação.</p>
+					<p>6.1 A comissão de avaliação deverá ser formada por todos aqueles que desejem participar
+					das decisões e que fizerem parte da Pastoral da comunicação, não estando portanto [… as
+					decisões estruturais] sob a tutela individual, exceto quando solicitada pelas partes citadas
+					no item 5.</p>
+					<p>6.2 As sugestões advindas de fora do núcleo técnico estrutural da PASCOM devem ser
+					tomadas como tal, ou seja, sugestão, e devem ser levadas a ata das reuniões para avaliação
+					da comissão descritas atraves de documento específico</p>
+					<p>6.3 Todas as decisões devem ser avaliadas, primeiro a luz do evangelho e catecismo
+					católico e segundo pelas diretrizes dispostas por esse documento.</p>
+					<p>6.4 Ao final da avaliação inicial conforme item 6.3 levar-se-á a votação para consolidação
+					da matéria</p>
+					<p>7.O endereço stream da url transmitido pela web e que contém a programação da rádio pode ser
+					disponibilizado para incorporação em outros meios mediante a solicitação antecipada e avaliada
+					pela comissão estrutural que interpretará se a solicitação obedece as diretrizes aqui impostas</p>
+					<a href="#pag2" data-role="button" data-transition="flip">Voltar</a>
+			</div>
+		</div>
+		</div>
+
+</body>
+</html>
