@@ -6,6 +6,12 @@
     <preference name="ErrorUrl" value="" />
     <preference name="BackgroundColor" value="" />
     <gap:platform name="android" />
+    <icon gap:density="ldpi" gap:platform="android" src="img/36.png" />
+    <icon gap:density="mdpi" gap:platform="android" src="img/48.png" />
+    <icon gap:density="hdpi" gap:platform="android" src="img/72.png" />
+    <icon gap:density="xhdpi" gap:platform="android" src="img/96.png" />
+    <icon gap:density="xxhdpi" gap:platform="android" src="img/144.png" />
+    <icon gap:density="xxxhdpi" gap:platform="android" src="img/192.png" />
     <access origin="*" />
     <preference name="phonegap-version" value="3.6.3" />
     <preference name="orientation" value="portrait" />
